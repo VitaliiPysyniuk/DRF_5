@@ -1,0 +1,9 @@
+<div class="center">
+  <h3>Authentication</h3>
+  <form [formGroup]='form' class="flex" (ngSubmit)="save()">
+    Email: <input [formControl]='email'>
+    Password: <input [formControl]='password'>
+    <div *ngIf="error">{{error|json}}</div>
+    <button>Save</button>
+  </form>
+</div>

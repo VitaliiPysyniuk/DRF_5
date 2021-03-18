@@ -1,0 +1,19 @@
+* {
+  margin: 0;
+}
+
+.center {
+  margin: 100px auto;
+  border: 2px solid navy;
+  padding: 20px;
+}
+
+.flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+input {
+  width: 200px;
+}

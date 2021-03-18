@@ -1,0 +1,17 @@
+<div class="center">
+  <h3>Create new user</h3>
+  <button (click)="allowFullInfo()">Add full information</button>
+  <form [formGroup]='form' class="flex" (ngSubmit)="saveUser()">
+    Email: <input [formControl]='email'>
+    Password: <input [formControl]='password'>
+    <div *ngIf="fullInfoFlag" class="flex">
+      Name: <input [formControl]='name'>
+      Surname: <input [formControl]='surname'>
+      Age: <input [formControl]='age'>
+      Profession: <input [formControl]='profession'>
+      Photo: <input type="file" [formControl]='photo' (change)="handleInputFile($event.target)">
+    </div>
+    <div *ngIf="error" class="error">{{error|json}}</div>
+    <button>Save</button>
+  </form>
+</div>
