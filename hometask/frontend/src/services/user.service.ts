@@ -13,7 +13,9 @@ export class UserService {
   constructor(private httpClient: HttpClient) { }
 
   createUser(userData: FormData): Observable<IUser> {
-    console.log(userData);
+    console.log(userData.get('email'));
+    console.log(userData.get('password'));
+    console.log(userData.get('profile'));
     return this.httpClient.post<IUser>(this.url + 'users/add/', userData);
   }
 
